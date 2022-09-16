@@ -96,7 +96,6 @@ function draw() {
   // Get the current scroll position and store it in the variable called 'pos'
   const pos = document.documentElement.scrollTop || document.body.scrollTop;
   // Log the position to the console
-  console.log('Scroll position: ' + pos);
 
   // Add the text.
   text(
