@@ -18,19 +18,19 @@
 // Chapter 1 variables
 let chapter_1 = {
   img_1: null,
-  img_1_position: [0, 400],
+  img_1_position: [0, 200], // x / y coordinates for the image
   img_2: null,
-  img_2_position: [0, 400],
+  img_2_position: [0, 200],
   img_2_opacity: 0,
   text: "This is a crossfade between two pictures.",
   text_position: [520, 400],
   text_width: 200,
-  start_reveal_at: 100,
-  end_reveal_at: 200,
+  start_reveal_at: 50,
+  end_reveal_at: 150,
   img_3: null,
-  img_3_position: [0, 500],
+  img_3_position: [0, 800],
   img_4: null,
-  img_4_position: [0, 500],
+  img_4_position: [0, 800],
   img_4_opacity: 0,
 }
 
@@ -47,6 +47,7 @@ function preload() {
   // Chapter 1 images
   chapter_1.img_1 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/original_render.jpeg?v=1663355914624');
   chapter_1.img_2 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/street_view.png?v=1663355913122');
+  // this set of images
   chapter_1.img_3 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/original_render.jpeg?v=1663355914624');
   chapter_1.img_4 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/street_view.png?v=1663355913122');
 }
@@ -72,7 +73,7 @@ function setup() {
 
   // Resize all images to be a specific width . Alternatively, this can
   // be done outside of the code as you prepare images.
-  const new_width = 500;
+  const new_width = 800;
 
   // Make images 500 pixels wide, keeping their orinal aspect ratio
   chapter_1.img_1.resize(
@@ -82,6 +83,14 @@ function setup() {
   chapter_1.img_2.resize(
     new_width, // new width
     chapter_1.img_2.height * new_width / chapter_1.img_2.width); // new height
+  
+  chapter_1.img_3.resize(
+    new_width, // new width
+    chapter_1.img_3.height * new_width / chapter_1.img_3.width); // new height
+
+  chapter_1.img_4.resize(
+    new_width, // new width
+    chapter_1.img_4.height * new_width / chapter_1.img_4.width); // new height
 
   // Set the text size to 16px
   textSize(16);
@@ -131,5 +140,27 @@ function draw() {
   chapter_1.img_2_opacity = map(
     pos,
     chapter_1.start_reveal_at, chapter_1.end_reveal_at,
+    0, 255);
+  
+  // Display the "before" image
+  tint(255, 255); // full opacity
+  image(
+    chapter_1.img_3, // the image loaded in the preload fxn
+    chapter_1.img_3_position[0], // the image's 'x' position
+    chapter_1.img_3_position[1]); // the image's 'y' position
+  
+  // Display the "after" image on top of the "before" image
+  tint(255, chapter_1.img_4_opacity); // changing opacity
+  image(
+    chapter_1.img_4, // the image loaded in the preload fxn
+    chapter_1.img_4_position[0],  // the image's 'x' position
+    chapter_1.img_4_position[1]); // the image's 'y' position
+
+  // Every frame, update the "after" image's opacity based on the scroll
+  // position.
+  // See: https://p5js.org/reference/#/p5/map
+  chapter_1.img_4_opacity = map(
+    pos,
+    500, 600,
     0, 255);
 }
