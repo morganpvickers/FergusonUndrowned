@@ -16,10 +16,15 @@ canvas {
   position: fixed;
   align-items: center;
   height: 70px;
+  top: 0;
   width: 100%;
   background-color: #46b1c9;
   padding: 0 36px;
-  margin-bottom: 100px;
+  z-index: 100;
+}
+
+.page-container {
+  margin-top: 70px;
 }
 
 .site-title {

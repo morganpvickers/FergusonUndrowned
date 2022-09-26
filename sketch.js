@@ -26,7 +26,12 @@ let chapter_1 = {
   text_position: [520, 400],
   text_width: 200,
   start_reveal_at: 100,
-  end_reveal_at: 200
+  end_reveal_at: 200,
+  img_3: null,
+  img_3_position: [0, 500],
+  img_4: null,
+  img_4_position: [0, 500],
+  img_4_opacity: 0,
 }
 
 
@@ -42,6 +47,8 @@ function preload() {
   // Chapter 1 images
   chapter_1.img_1 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/original_render.jpeg?v=1663355914624');
   chapter_1.img_2 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/street_view.png?v=1663355913122');
+  chapter_1.img_3 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/original_render.jpeg?v=1663355914624');
+  chapter_1.img_4 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/street_view.png?v=1663355913122');
 }
 
 
