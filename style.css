@@ -18,4 +18,69 @@ canvas {
   height: 70px;
   width: 100%;
   background-color: #46b1c9;
+  padding: 0 36px;
+  margin-bottom: 100px;
+}
+
+.site-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.card {
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+model-viewer {
+  width: 100%;
+  height: 400px;
+}
+
+.ferguson {
+  background-color: #99ccff;
+}
+
+.ferguson-historical {
+  background-color: #ffffe6;
+}
+
+.ferguson-georeferenced {
+  background-color: #004d00;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.attribution h1 {
+  margin: 0 0 0.25em;
+}
+
+.attribution img {
+  opacity: 0.5;
+  height: 2em;
+}
+
+.attribution .cc {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5em;
 }
