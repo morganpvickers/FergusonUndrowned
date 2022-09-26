@@ -3,10 +3,38 @@
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="menu-styles.css" />
     <meta charset="utf-8" />
   </head>
   <body>
-    <div id="sketch"></div>
-    <script src="sketch.js"></script>
+    <div class="page-title">Drowned Cities</div>
+    <!-- start of menu html     -->
+    <div class="navigation">
+      <div class="menuToggle"></div>
+      <ul>
+        <li class="list" style="--clr: #f44336">
+          <a href="#">
+            <spand class="icon"
+              ><ion-icon name="home-outline"></ion-icon
+            ></spand>
+            <spand class="text">Home</spand>
+          </a>
+        </li>
+        <li class="list" style="--clr: #ffa117">
+          <a href="#">
+            <spand class="icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></spand>
+            <spand class="text">About</spand>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--  end of menu html  -->
+    <div>
+      <div id="sketch"></div>
+      <script src="sketch.js"></script>
+    </div>
   </body>
+  <script src="menu-functions.js"></script>
 </html>
