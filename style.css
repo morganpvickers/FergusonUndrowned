@@ -1,12 +1,21 @@
 html,
 body {
-  background: linear-gradient(180deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
-  background: -moz-linear-gradient(180deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
-  background: -webkit-linear-gradient(180deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
+  background: linear-gradient(270deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
+  background: -moz-linear-gradient(270deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
+  background: -webkit-linear-gradient(270deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
   margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
   margin: auto;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background-color: #46b1c9;
 }
