@@ -62,12 +62,9 @@ function preload() {
 
 function setup() {
   // Create a canvas
-  const canvas_width = 800;
   const canvas_height = 2400;
-  // The canvas is 800 pixels wide and 2400 pixels tall
-  const canvas = createCanvas(canvas_width, canvas_height);
-  const strokeColor = stroke(255);
-  const timeLine = line(0, 0, 0, 2400);
+  // The canvas is x pixels wide and 2400 pixels tall
+  const canvas = createCanvas(windowWidth, canvas_height);
 
   // Add the canvas to a specific DOM element in index.html
   // See doc: https://p5js.org/reference/#/p5.Element/parent
@@ -110,6 +107,13 @@ function setup() {
 function draw() {
   // Clear the canvas every frame
   clear();
+  
+  // vertical timeline
+  const strokeColor = stroke(255);
+  strokeWeight(10);
+  const timeLine = line(400, 210, 400, 2400);
+  
+  // tickmarks - TODO
 
   // Get the current scroll position and store it in the variable called 'pos'
   const pos = document.documentElement.scrollTop || document.body.scrollTop;

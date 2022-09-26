@@ -9,6 +9,7 @@ body {
 canvas {
   display: block;
   margin: auto;
+  padding: 0 48px;
 }
 
 .navbar {
