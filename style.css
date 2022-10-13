@@ -16,21 +16,23 @@ canvas {
   display: flex;
   position: fixed;
   align-items: center;
+  justify-content: space-between;
   height: 70px;
   top: 0;
   width: 100%;
-  background-color: #46b1c9;
+  background-color: #EDEBD7;
   padding: 0 36px;
   z-index: 100;
-}
-
-.page-container {
-  margin-top: 70px;
 }
 
 .site-title {
   font-size: 32px;
   font-weight: 600;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.page-container {
+  margin-top: 70px;
 }
 
 .card {
