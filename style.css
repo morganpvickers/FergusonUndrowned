@@ -8,7 +8,14 @@ body {
   background: -webkit-linear-gradient(270deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
   margin: 0;
   padding: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /*firefox*/
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 canvas {
   display: block;
   margin: auto;
@@ -41,6 +48,10 @@ canvas {
 
 .navbar-link {
   margin-right: 16px;
+  
+  &last-child {
+    margin-right: 0;
+  }
 }
 
 .page-container {
