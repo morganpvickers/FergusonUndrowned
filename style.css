@@ -54,6 +54,13 @@ canvas {
   margin-right: 24px;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+  transition: all 200ms ease-in-out;
+}
+
+.navbar-link:hover {
+  color: #7B2D26;
 }
 
 .navbar-link:last-child {

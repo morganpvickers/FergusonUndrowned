@@ -111,7 +111,7 @@ function draw() {
   // vertical timeline
   const strokeColor = stroke(255);
   strokeWeight(10);
-  const timeLine = line(400, 210, 400, 2400);
+  const timeLine = line(400, 0, 400, 2400);
   
   // tickmarks - TODO
 
