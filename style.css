@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Myeongjo:wght@400;500;600;700;800;&display=swap");
+
+
 html,
 body {
   background: linear-gradient(270deg, hsla(207, 52%, 38%, 1) 0%, hsla(207, 50%, 29%, 1) 48%, hsla(163, 18%, 33%, 1) 77%, hsla(78, 22%, 29%, 1) 97%);
@@ -29,6 +32,15 @@ canvas {
   font-size: 32px;
   font-weight: 700;
   font-family: 'Nanum Myeongjo', serif;
+}
+
+.navbar-links {
+  font-size: 20px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.navbar-link {
+  margin-right: 16px;
 }
 
 .page-container {
