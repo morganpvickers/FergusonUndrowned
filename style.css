@@ -31,7 +31,6 @@ canvas {
   top: 0;
   width: 100%;
   background-color: #EDEBD7;
-  padding: 0 36px;
   z-index: 100;
 }
 
@@ -39,19 +38,24 @@ canvas {
   font-size: 32px;
   font-weight: 700;
   font-family: 'Nanum Myeongjo', serif;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar-links {
   font-size: 20px;
   font-family: 'Nanum Myeongjo', serif;
+  margin
 }
 
 .navbar-link {
   margin-right: 16px;
-  
-  &last-child {
-    margin-right: 0;
-  }
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar-link:last-child {
+  margin-right: 0;
 }
 
 .page-container {
