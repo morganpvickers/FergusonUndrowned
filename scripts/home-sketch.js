@@ -45,11 +45,11 @@ let chapter_1 = {
 
 function preload() {
   // Chapter 1 images
-  chapter_1.img_1 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/original_render.jpeg?v=1663355914624');
-  chapter_1.img_2 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/street_view.png?v=1663355913122');
+  chapter_1.img_1 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/fergusonmill.png?v=1666989115203');
+  chapter_1.img_2 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/decayingkiln.jpeg?v=1666989566934');
   // this set of images
-  chapter_1.img_3 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/original_render.jpeg?v=1663355914624');
-  chapter_1.img_4 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/street_view.png?v=1663355913122');
+  chapter_1.img_3 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/fergusonpostcard.png?v=1666989116216');
+  chapter_1.img_4 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/submergedisland.jpeg?v=1666989542697');
 }
 
 
