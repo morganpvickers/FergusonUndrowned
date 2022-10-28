@@ -20,7 +20,7 @@ let chapter_1 = {
   img_1: null,
   img_1_position: [0, 200], // x / y coordinates for the image
   img_2: null,
-  img_2_position: [0, 200],
+  img_2_position: [900, 200],
   img_2_opacity: 0,
   text: "This is a crossfade between two pictures.",
   text_position: [520, 400],
@@ -30,7 +30,7 @@ let chapter_1 = {
   img_3: null,
   img_3_position: [0, 800],
   img_4: null,
-  img_4_position: [0, 800],
+  img_4_position: [900, 800],
   img_4_opacity: 0,
 }
 
@@ -46,7 +46,7 @@ let chapter_1 = {
 function preload() {
   // Chapter 1 images
   chapter_1.img_1 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/fergusonmill.png?v=1666989115203');
-  chapter_1.img_2 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/decayingkiln.jpeg?v=1666989566934');
+  chapter_1.img_2 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/decayingkiln2.jpeg?v=1666989977375');
   // this set of images
   chapter_1.img_3 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/fergusonpostcard.png?v=1666989116216');
   chapter_1.img_4 = loadImage('https://cdn.glitch.global/205f4e7b-b3da-4f71-9b78-d2de539b3547/submergedisland.jpeg?v=1666989542697');
@@ -72,7 +72,7 @@ function setup() {
 
   // Resize all images to be a specific width . Alternatively, this can
   // be done outside of the code as you prepare images.
-  const new_width = 800;
+  const new_width = 700;
 
   // Make images 500 pixels wide, keeping their orinal aspect ratio
   chapter_1.img_1.resize(
@@ -109,9 +109,9 @@ function draw() {
   clear();
   
   // vertical timeline
-  const strokeColor = stroke(255);
+  const strokeColor = stroke('#EDEBD7');
   strokeWeight(10);
-  const timeLine = line(400, 0, 400, 2400);
+  const timeLine = line(windowWidth / 2, 0, windowWidth / 2, 2400);
   
   // tickmarks - TODO
 
