@@ -38,8 +38,14 @@ canvas {
   font-weight: 700;
   font-family: 'Nanum Myeongjo', serif;
   cursor: pointer;
+  color: #000000;
   text-decoration: none;
   margin-left: 32px;
+  transition: all 200ms ease-in-out;
+}
+
+.site-title:hover {
+  color: #7B2D26;
 }
 
 .navbar-links {
