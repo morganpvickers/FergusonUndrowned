@@ -23,6 +23,8 @@ canvas {
   padding: 0 48px;
 }
 
+/* navbar/menu styles */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -31,32 +33,85 @@ canvas {
   top: 0;
   width: 100%;
   background-color: rgba(237,235,215);
+  box-shadow: 0px 0px 19px rgb(0 0 0 / 40%);
   z-index: 100;
 }
 
 .site-title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   font-family: 'Nanum Myeongjo', serif;
   cursor: pointer;
-  color: #000000;
   text-decoration: none;
   margin-left: 32px;
-  transition: all 200ms ease-in-out;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .site-title {
+    font-size: 32px;
+  }
 }
 
 .site-title:hover {
   color: #7B2D26;
 }
 
-.navbar-links {
-  font-size: 20px;
+.mobile-menu {
+  display: none;
+  z-index: 100;
+  background-color:rgba(237,235,215, .85);
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 128px 64px;
+  transition: all 200ms ease-in-out;
+}
+
+.open-menu {
+  display: flex;
+}
+
+.mobile-menu-link {
+  font-size: 32px;
   font-family: 'Nanum Myeongjo', serif;
+  margin-bottom: 32px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.mobile-menu-button {
+  display: block;
+  margin-right: 32px;
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+.navbar-links {
   margin-right: 32px;
   margin-top: 8px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-links {
+    display: block;
+  }
 }
 
 .navbar-link {
+  font-size: 20px;
+  font-family: 'Nanum Myeongjo', serif;
   margin-right: 24px;
   cursor: pointer;
   text-decoration: none;
@@ -73,6 +128,51 @@ canvas {
   margin-right: 0;
 }
 
+.toggle-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: 128px;
+}
+
+.menuToggle {
+  position: relative;
+  align-self: flex-end;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+}
+
+.menuToggle:before {
+  content: "";
+  background: #333333;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  transform: translateY(-8px);
+  transition: 0.5s;
+}
+
+.menuToggle:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.menuToggle:after {
+  content: "";
+  background: #333333;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  transform: translateY(8px);
+  transition: 0.5s;
+  box-shadow: 0 -8px 0 #333333;
+}
+
+.menuToggle:after {
+  transform: translateY(0px) rotate(-45deg);
+  box-shadow: 0 0px 0 #333333;
+}
+
 .page-container {
   margin-top: 70px;
 }
@@ -81,7 +181,7 @@ canvas {
   margin: 3em auto;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 750px;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -89,7 +189,7 @@ canvas {
 
 model-viewer {
   width: 100%;
-  height: 400px;
+  height: 550px;
 }
 
 .ferguson {
@@ -108,16 +208,18 @@ model-viewer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: 'Nanum Myeongjo', serif;
+  line-height: 24px;
   background-color: white;
   padding: 0;
 }
 
 .attribution-text {
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .attribution h1 {
-  margin: 0 0 0.25em;
+  margin-bottom: 16px;
 }
 
 .attribution img {
@@ -134,7 +236,7 @@ footer {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   font-style: italic;
   line-height: 1.5em;

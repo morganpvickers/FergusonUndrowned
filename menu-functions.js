@@ -1,15 +1,12 @@
-const menuToggle = document.querySelector(".menuToggle");
-const navigation = document.querySelector(".navigation");
+const menuToggle = document.querySelector(".toggle-container");
+const menuButton = document.querySelector(".mobile-menu-button");
+const mobileMenu = document.querySelector(".mobile-menu");
 const list = document.querySelectorAll('.list');
 
-function activeLink() {
-  list.forEach((item) =>
-              item.classList.remove('active'));
-  this.classList.add('active');
-}
-
 menuToggle.onclick = function () {
-  navigation.classList.toggle("open");
+  mobileMenu.classList.toggle("open-menu");
+};
+menuButton.onclick = function () {
+  mobileMenu.classList.toggle("open-menu");
 };
 
-list.forEach((item) => item.addEventListener('click', activeLink));
