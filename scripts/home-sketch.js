@@ -149,7 +149,7 @@ function setup() {
 
   textFont('Nanum Myeongjo');
   textStyle(BOLD);
-  textLeading(40);
+  textLeading(34);
   textSize(21);
   textWrap(WORD);
 }
@@ -255,11 +255,11 @@ function draw() {
       strokeWeight(0);
       if (index === 0) fill(255);
       if (index !== 0) fill(255, 255, 255, opacityMap);
-      let textOffset = 256;
+      let textOffset = 224;
       
       if (index === 0) textOffset = 200;
-      if (index === 1) textOffset = 128;
-      if (index === 5) textOffset = 304;
+      if (index === 1) textOffset = 104;
+      if (index === 5) textOffset = 296;
       
       text(
         description,
