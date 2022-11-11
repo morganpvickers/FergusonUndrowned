@@ -236,7 +236,8 @@ footer {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 0 auto 256px auto;
+  padding-bottom: 216px;
+  margin: 0 auto;
   text-align: center;
   font-style: italic;
   line-height: 1.5em;
@@ -294,6 +295,7 @@ footer {
   border-radius: 8px;
   box-shadow: 0px 0px 6px rgb(0 0 0 / 40%);
 }
+
 @media screen and (min-width: 768px) {
  .bio-body {
     display: flex;
