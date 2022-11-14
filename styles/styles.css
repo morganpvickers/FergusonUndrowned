@@ -23,6 +23,11 @@ canvas {
   padding: 0 48px;
 }
 
+/* set to the same height as home-sketch canvas */
+.canvas-body {
+  height: 7500px;
+}
+
 /* navbar/menu styles */
 
 .navbar {
