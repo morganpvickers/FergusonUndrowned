@@ -190,6 +190,10 @@ function drawTimelineTick(yPosition) {
   );
 }
 
+function openVisualizationsPage() {
+  window.open('/pages/visualizations.html');
+}
+
 /* -----------------------------------------------------------------------------
  * The draw() function is the magic sauce in p5. After preload and setup, it is
  * called repeatedly, many times per second. This is where all of our
@@ -272,8 +276,8 @@ function draw() {
     drawTimelineTick(tickYPosition);
   });
   
-  // // Add link at the bottom of the timeline
-  // const vizLink = createA('https://undrowned.glitch.me/pages/visualizations.html', 'View Visualizations', '_blank');
-  // vizLink.position(750, contentSpecs.canvasHeight - 160);
-  // vizLink.class('vizLink');
+  const vizLink = createDiv('View Visualizations')
+  vizLink.position(750, contentSpecs.canvasHeight - 160);
+  vizLink.class('vizLink');
+  vizLink.mousePressed(openVisualizationsPage);
 }

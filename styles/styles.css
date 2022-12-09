@@ -315,9 +315,8 @@ footer {
   color: #edebd7;
   font-family: 'Nanum Myeongjo', serif;
   font-size: 21px;
-}
-
-.vizLink:hover {
+  padding: 8px;
+  text-decoration: underline;
   cursor: pointer;
 }
 
