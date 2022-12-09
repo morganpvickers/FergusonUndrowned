@@ -271,4 +271,9 @@ function draw() {
 
     drawTimelineTick(tickYPosition);
   });
+  
+  // // Add link at the bottom of the timeline
+  // const vizLink = createA('https://undrowned.glitch.me/pages/visualizations.html', 'View Visualizations', '_blank');
+  // vizLink.position(750, contentSpecs.canvasHeight - 160);
+  // vizLink.class('vizLink');
 }
